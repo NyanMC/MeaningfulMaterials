@@ -1,8 +1,10 @@
 package com.chromanyan.meaningfulmaterials;
 
+import com.chromanyan.meaningfulmaterials.datagen.loot.MMLootTableProvider;
 import com.chromanyan.meaningfulmaterials.datagen.tags.MMBlockTags;
 import com.chromanyan.meaningfulmaterials.datagen.tags.MMItemTags;
 import com.chromanyan.meaningfulmaterials.event.MMEvents;
+import com.chromanyan.meaningfulmaterials.init.MMBlocks;
 import com.chromanyan.meaningfulmaterials.init.MMItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.data.DataGenerator;
@@ -28,6 +30,7 @@ public class MeaningfulMaterials {
     public MeaningfulMaterials() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        MMBlocks.BLOCKS_REGISTRY.register(modEventBus);
         MMItems.ITEMS_REGISTRY.register(modEventBus);
 
         // Register the commonSetup method for modloading
@@ -49,5 +52,7 @@ public class MeaningfulMaterials {
         MMBlockTags blockTags = new MMBlockTags(gen, efh);
         gen.addProvider(event.includeServer(), blockTags);
         gen.addProvider(event.includeServer(), new MMItemTags(gen, blockTags, efh));
+
+        gen.addProvider(event.includeServer(), new MMLootTableProvider(gen));
     }
 }
