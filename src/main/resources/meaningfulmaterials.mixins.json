@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.chromanyan.meaningfulmaterials.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "meaningfulmaterials.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
