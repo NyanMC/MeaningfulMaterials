@@ -34,7 +34,7 @@ public class MMLootTableProvider extends LootTableProvider {
     }
 
     @Override
-    protected void validate(Map<ResourceLocation,LootTable> map, ValidationContext validationtracker) {
+    protected void validate(Map<ResourceLocation,LootTable> map, @NotNull ValidationContext validationtracker) {
         map.forEach((loc, table) -> LootTables.validate(validationtracker, loc, table));
         // Remove vanilla's tables, which we also loaded so we can redirect stuff to them.
         // This ensures the remaining generator logic doesn't write those to files.
@@ -42,7 +42,7 @@ public class MMLootTableProvider extends LootTableProvider {
     }
 
     @Override
-    public String getName() {
+    public @NotNull String getName() {
         return "Meaningful Materials LootTables";
     }
 }
