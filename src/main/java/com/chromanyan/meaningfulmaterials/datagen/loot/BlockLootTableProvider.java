@@ -2,6 +2,7 @@ package com.chromanyan.meaningfulmaterials.datagen.loot;
 
 import com.chromanyan.meaningfulmaterials.MeaningfulMaterials;
 import com.chromanyan.meaningfulmaterials.init.MMBlocks;
+import com.chromanyan.meaningfulmaterials.init.MMItems;
 import net.minecraft.core.Registry;
 import net.minecraft.data.loot.BlockLoot;
 import net.minecraft.world.level.block.Block;
@@ -24,5 +25,7 @@ public class BlockLootTableProvider extends BlockLoot {
     @Override
     protected void addTables() {
         dropSelf(MMBlocks.COSMITE_BLOCK.get());
+
+        add(MMBlocks.COSMITE_ORE.get(), block -> createOreDrop(block, MMItems.COSMITE.get()));
     }
 }

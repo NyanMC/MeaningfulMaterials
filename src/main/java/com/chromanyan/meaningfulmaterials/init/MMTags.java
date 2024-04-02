@@ -19,6 +19,7 @@ public class MMTags {
 
         public static final TagKey<Item> GEMS_COSMITE = forgeTag("gems/cosmite");
         public static final TagKey<Item> STORAGE_BLOCKS_COSMITE = forgeTag("storage_blocks/cosmite");
+        public static final TagKey<Item> ORES_COSMITE = forgeTag("ores/cosmite");
 
         /**
          * ItemEntities containing an item with this tag will float in the air.
@@ -32,6 +33,7 @@ public class MMTags {
         }
 
         public static final TagKey<Block> STORAGE_BLOCKS_COSMITE = forgeTag("storage_blocks/cosmite");
+        public static final TagKey<Block> ORES_COSMITE = forgeTag("ores/cosmite");
     }
 
 }

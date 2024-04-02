@@ -22,6 +22,9 @@ public class MMItemTags extends ItemTagsProvider {
         copy(MMTags.Blocks.STORAGE_BLOCKS_COSMITE, MMTags.Items.STORAGE_BLOCKS_COSMITE);
         copy(Tags.Blocks.STORAGE_BLOCKS, Tags.Items.STORAGE_BLOCKS);
 
+        copy(MMTags.Blocks.ORES_COSMITE, MMTags.Items.ORES_COSMITE);
+        copy(Tags.Blocks.ORES, Tags.Items.ORES);
+
         tag(MMTags.Items.GEMS_COSMITE).add(MMItems.COSMITE.get());
         tag(Tags.Items.GEMS).add(MMItems.COSMITE.get());
         tag(ItemTags.BEACON_PAYMENT_ITEMS).add(MMItems.COSMITE.get());

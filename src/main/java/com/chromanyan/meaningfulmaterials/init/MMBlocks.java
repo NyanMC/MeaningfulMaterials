@@ -19,4 +19,10 @@ public class MMBlocks {
                     .strength(5.0F, 6.0F)
                     .sound(SoundType.METAL))
     );
+
+    public static final RegistryObject<Block> COSMITE_ORE = BLOCKS_REGISTRY.register("cosmite_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.SAND)
+                    .requiresCorrectToolForDrops()
+                    .strength(4.5F, 6.0F))
+    );
 }

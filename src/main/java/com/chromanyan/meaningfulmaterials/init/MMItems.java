@@ -17,4 +17,6 @@ public class MMItems {
 
     public static final RegistryObject<BlockItem> COSMITE_BLOCK_ITEM = ITEMS_REGISTRY.register("cosmite_block",
             () -> new BlockItem(MMBlocks.COSMITE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<BlockItem> COSMITE_ORE_ITEM = ITEMS_REGISTRY.register("cosmite_ore",
+            () -> new BlockItem(MMBlocks.COSMITE_ORE.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
 }
