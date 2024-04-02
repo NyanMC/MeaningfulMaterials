@@ -22,5 +22,6 @@ public class MMBlockTags extends BlockTagsProvider {
         tag(BlockTags.BEACON_BASE_BLOCKS).add(MMBlocks.COSMITE_BLOCK.get());
         tag(MMTags.Blocks.STORAGE_BLOCKS_COSMITE).add(MMBlocks.COSMITE_BLOCK.get());
         tag(Tags.Blocks.STORAGE_BLOCKS).add(MMBlocks.COSMITE_BLOCK.get());
+        tag(BlockTags.NEEDS_DIAMOND_TOOL).add(MMBlocks.COSMITE_BLOCK.get());
     }
 }
