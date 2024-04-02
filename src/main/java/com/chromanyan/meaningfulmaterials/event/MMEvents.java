@@ -13,6 +13,7 @@ public class MMEvents {
 
         if (itemEntity.getItem().is(MMTags.Items.DEFIES_GRAVITY)) {
             itemEntity.setNoGravity(true);
+            itemEntity.setDeltaMovement(itemEntity.getDeltaMovement().multiply(1, 0, 1));
         }
     }
 }
