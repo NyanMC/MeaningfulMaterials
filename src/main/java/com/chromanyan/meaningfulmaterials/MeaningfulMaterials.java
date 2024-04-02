@@ -1,5 +1,6 @@
 package com.chromanyan.meaningfulmaterials;
 
+import com.chromanyan.meaningfulmaterials.init.MMItems;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -22,6 +23,8 @@ public class MeaningfulMaterials {
 
     public MeaningfulMaterials() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        MMItems.ITEMS_REGISTRY.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
