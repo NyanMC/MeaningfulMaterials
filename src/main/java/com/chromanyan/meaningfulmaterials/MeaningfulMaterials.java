@@ -2,6 +2,7 @@ package com.chromanyan.meaningfulmaterials;
 
 import com.chromanyan.meaningfulmaterials.datagen.tags.MMBlockTags;
 import com.chromanyan.meaningfulmaterials.datagen.tags.MMItemTags;
+import com.chromanyan.meaningfulmaterials.event.MMEvents;
 import com.chromanyan.meaningfulmaterials.init.MMItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.data.DataGenerator;
@@ -38,7 +39,7 @@ public class MeaningfulMaterials {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        // Some common setup code
+        MinecraftForge.EVENT_BUS.register(new MMEvents());
     }
 
     public void gatherData(GatherDataEvent event) {
