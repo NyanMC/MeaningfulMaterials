@@ -10,6 +10,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Supplier;
 
+@SuppressWarnings("deprecation")
 public enum MMArmorMaterials implements ArmorMaterial {
     COSMITE("cosmite", 15, new int[]{2, 5, 6, 2}, 15, SoundEvents.ARMOR_EQUIP_IRON,
             0.0F, 0.0F, () -> Ingredient.of(MMItems.COSMITE.get()));
@@ -24,7 +25,7 @@ public enum MMArmorMaterials implements ArmorMaterial {
     private final float knockbackResistance;
     private final LazyLoadedValue<Ingredient> repairIngredient;
 
-    private MMArmorMaterials(String p_40474_, int p_40475_, int[] p_40476_, int p_40477_, SoundEvent p_40478_, float p_40479_, float p_40480_, Supplier<Ingredient> p_40481_) {
+    MMArmorMaterials(String p_40474_, int p_40475_, int[] p_40476_, int p_40477_, SoundEvent p_40478_, float p_40479_, float p_40480_, Supplier<Ingredient> p_40481_) {
         this.name = p_40474_;
         this.durabilityMultiplier = p_40475_;
         this.slotProtections = p_40476_;
