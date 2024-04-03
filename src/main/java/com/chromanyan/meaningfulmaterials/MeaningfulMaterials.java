@@ -1,5 +1,6 @@
 package com.chromanyan.meaningfulmaterials;
 
+import com.chromanyan.meaningfulmaterials.datagen.MMWorldGen;
 import com.chromanyan.meaningfulmaterials.datagen.loot.MMLootTableProvider;
 import com.chromanyan.meaningfulmaterials.datagen.tags.MMBlockTags;
 import com.chromanyan.meaningfulmaterials.datagen.tags.MMItemTags;
@@ -50,9 +51,13 @@ public class MeaningfulMaterials {
         ExistingFileHelper efh = event.getExistingFileHelper();
 
         MMBlockTags blockTags = new MMBlockTags(gen, efh);
-        gen.addProvider(event.includeServer(), blockTags);
-        gen.addProvider(event.includeServer(), new MMItemTags(gen, blockTags, efh));
+        if (event.includeServer()) {
+            gen.addProvider(true, blockTags);
+            gen.addProvider(true, new MMItemTags(gen, blockTags, efh));
 
-        gen.addProvider(event.includeServer(), new MMLootTableProvider(gen));
+            gen.addProvider(true, new MMLootTableProvider(gen));
+
+            MMWorldGen.init(gen, efh);
+        }
     }
 }
