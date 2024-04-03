@@ -9,6 +9,8 @@ import com.chromanyan.meaningfulmaterials.datagen.tags.MMBlockTags;
 import com.chromanyan.meaningfulmaterials.datagen.tags.MMItemTags;
 import com.chromanyan.meaningfulmaterials.event.MMEvents;
 import com.chromanyan.meaningfulmaterials.init.MMBlocks;
+import com.chromanyan.meaningfulmaterials.init.MMDispenserBehaviors;
+import com.chromanyan.meaningfulmaterials.init.MMEntities;
 import com.chromanyan.meaningfulmaterials.init.MMItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.data.DataGenerator;
@@ -34,6 +36,7 @@ public class MeaningfulMaterials {
     public MeaningfulMaterials() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        MMEntities.ENTITY_TYPES_REGISTRY.register(modEventBus);
         MMBlocks.BLOCKS_REGISTRY.register(modEventBus);
         MMItems.ITEMS_REGISTRY.register(modEventBus);
 
@@ -47,6 +50,7 @@ public class MeaningfulMaterials {
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         MinecraftForge.EVENT_BUS.register(new MMEvents());
+        MMDispenserBehaviors.registerBehaviors();
     }
 
     public void gatherData(GatherDataEvent event) {

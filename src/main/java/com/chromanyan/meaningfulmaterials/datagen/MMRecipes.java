@@ -5,6 +5,7 @@ import com.chromanyan.meaningfulmaterials.init.MMItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import org.jetbrains.annotations.NotNull;
@@ -53,6 +54,15 @@ public class MMRecipes extends RecipeProvider {
                 .define('#', MMItems.COSMITE.get())
                 .unlockedBy("has_cosmite", has(MMItems.COSMITE.get()))
                 .save(consumer, new ResourceLocation(MeaningfulMaterials.MODID, "cosmite_boots"));
+
+        ShapedRecipeBuilder.shaped(MMItems.COSMIC_ARROW.get(), 6)
+                .pattern("aaa")
+                .pattern(" c ")
+                .pattern("aaa")
+                .define('a', Items.ARROW)
+                .define('c', MMItems.COSMITE.get())
+                .unlockedBy("has_cosmite", has(MMItems.COSMITE.get()))
+                .save(consumer, new ResourceLocation(MeaningfulMaterials.MODID, "cosmic_arrow"));
 
         oreProcessing(consumer, MMItems.COSMITE_ORE_ITEM.get(), MMItems.COSMITE.get(), "cosmite", 1.5f, 200);
     }

@@ -31,10 +31,13 @@ public class MMItemTags extends ItemTagsProvider {
 
         tag(MMTags.Items.DEFIES_GRAVITY).add(
                 MMItems.COSMITE.get(),
+                MMItems.COSMIC_ARROW.get(),
+                MMItems.COSMITE_BOOTS.get(),
                 MMItems.COSMITE_BLOCK_ITEM.get(),
-                MMItems.COSMITE_ORE_ITEM.get(),
-                MMItems.COSMITE_BOOTS.get()
+                MMItems.COSMITE_ORE_ITEM.get()
         );
+
+        tag(ItemTags.ARROWS).add(MMItems.COSMIC_ARROW.get());
 
         tag(Tags.Items.ARMORS_BOOTS).add(MMItems.COSMITE_BOOTS.get());
     }

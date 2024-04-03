@@ -26,6 +26,7 @@ public class MMItemModels extends ItemModelProvider {
     protected void registerModels() {
         basicModel("cosmite");
         basicModel("cosmite_boots");
+        basicModel("cosmic_arrow");
 
         blockModel("cosmite_block");
         blockModel("cosmite_ore");

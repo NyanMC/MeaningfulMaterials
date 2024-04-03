@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "a": {
+      "item": "minecraft:arrow"
+    },
+    "c": {
+      "item": "meaningfulmaterials:cosmite"
+    }
+  },
+  "pattern": [
+    "aaa",
+    " c ",
+    "aaa"
+  ],
+  "result": {
+    "count": 6,
+    "item": "meaningfulmaterials:cosmic_arrow"
+  }
+}
