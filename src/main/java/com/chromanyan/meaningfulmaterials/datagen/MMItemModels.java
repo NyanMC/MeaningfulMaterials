@@ -11,7 +11,6 @@ public class MMItemModels extends ItemModelProvider {
         super(generator, MeaningfulMaterials.MODID, existingFileHelper);
     }
 
-    @SuppressWarnings("SameParameterValue")
     private void basicModel(String name) {
         this.singleTexture(name,
                 mcLoc("item/generated"),
@@ -26,6 +25,8 @@ public class MMItemModels extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicModel("cosmite");
+        basicModel("cosmite_boots");
+
         blockModel("cosmite_block");
         blockModel("cosmite_ore");
     }

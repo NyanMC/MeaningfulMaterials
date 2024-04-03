@@ -47,6 +47,13 @@ public class MMRecipes extends RecipeProvider {
     protected void buildCraftingRecipes(@NotNull Consumer<FinishedRecipe> consumer) {
         packAndUnpack(consumer, MMItems.COSMITE.get(), MMItems.COSMITE_BLOCK_ITEM.get(), "cosmite", "cosmite_block");
 
+        ShapedRecipeBuilder.shaped(MMItems.COSMITE_BOOTS.get())
+                .pattern("# #")
+                .pattern("# #")
+                .define('#', MMItems.COSMITE.get())
+                .unlockedBy("has_cosmite", has(MMItems.COSMITE.get()))
+                .save(consumer, new ResourceLocation(MeaningfulMaterials.MODID, "cosmite_boots"));
+
         oreProcessing(consumer, MMItems.COSMITE_ORE_ITEM.get(), MMItems.COSMITE.get(), "cosmite", 1.5f, 200);
     }
 }
