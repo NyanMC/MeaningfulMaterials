@@ -29,6 +29,13 @@ public class MMItemTags extends ItemTagsProvider {
         tag(Tags.Items.GEMS).add(MMItems.COSMITE.get());
         tag(ItemTags.BEACON_PAYMENT_ITEMS).add(MMItems.COSMITE.get());
 
-        tag(MMTags.Items.DEFIES_GRAVITY).add(MMItems.COSMITE.get(), MMItems.COSMITE_BLOCK_ITEM.get());
+        tag(MMTags.Items.DEFIES_GRAVITY).add(
+                MMItems.COSMITE.get(),
+                MMItems.COSMITE_BLOCK_ITEM.get(),
+                MMItems.COSMITE_ORE_ITEM.get(),
+                MMItems.COSMITE_BOOTS.get()
+        );
+
+        tag(Tags.Items.ARMORS_BOOTS).add(MMItems.COSMITE_BOOTS.get());
     }
 }

@@ -1,6 +1,8 @@
 {
   "values": [
     "meaningfulmaterials:cosmite",
-    "meaningfulmaterials:cosmite_block"
+    "meaningfulmaterials:cosmite_block",
+    "meaningfulmaterials:cosmite_ore",
+    "meaningfulmaterials:cosmite_boots"
   ]
 }
