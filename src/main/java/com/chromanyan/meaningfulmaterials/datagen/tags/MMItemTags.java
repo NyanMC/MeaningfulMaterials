@@ -34,7 +34,8 @@ public class MMItemTags extends ItemTagsProvider {
                 MMItems.COSMIC_ARROW.get(),
                 MMItems.COSMITE_BOOTS.get(),
                 MMItems.COSMITE_BLOCK_ITEM.get(),
-                MMItems.COSMITE_ORE_ITEM.get()
+                MMItems.COSMITE_ORE_ITEM.get(),
+                MMItems.COSMIC_LANTERN_ITEM.get()
         );
 
         tag(ItemTags.ARROWS).add(MMItems.COSMIC_ARROW.get());

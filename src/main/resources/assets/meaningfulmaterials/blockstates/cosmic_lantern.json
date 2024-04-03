@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "meaningfulmaterials:block/cosmic_lantern"
+    },
+    "hanging=true": {
+      "model": "meaningfulmaterials:block/cosmic_lantern_hanging"
+    }
+  }
+}

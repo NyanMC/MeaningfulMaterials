@@ -55,14 +55,25 @@ public class MMRecipes extends RecipeProvider {
                 .unlockedBy("has_cosmite", has(MMItems.COSMITE.get()))
                 .save(consumer, new ResourceLocation(MeaningfulMaterials.MODID, "cosmite_boots"));
 
-        ShapedRecipeBuilder.shaped(MMItems.COSMIC_ARROW.get(), 6)
-                .pattern("aaa")
-                .pattern(" c ")
-                .pattern("aaa")
-                .define('a', Items.ARROW)
-                .define('c', MMItems.COSMITE.get())
+        ShapelessRecipeBuilder.shapeless(MMItems.COSMIC_ARROW.get(), 6)
+                .requires(MMItems.COSMITE.get())
+                .requires(Items.ARROW)
+                .requires(Items.ARROW)
+                .requires(Items.ARROW)
+                .requires(Items.ARROW)
+                .requires(Items.ARROW)
+                .requires(Items.ARROW)
                 .unlockedBy("has_cosmite", has(MMItems.COSMITE.get()))
                 .save(consumer, new ResourceLocation(MeaningfulMaterials.MODID, "cosmic_arrow"));
+
+        ShapelessRecipeBuilder.shapeless(MMItems.COSMIC_LANTERN_ITEM.get(), 4)
+                .requires(MMItems.COSMITE.get())
+                .requires(Items.LANTERN)
+                .requires(Items.LANTERN)
+                .requires(Items.LANTERN)
+                .requires(Items.LANTERN)
+                .unlockedBy("has_cosmite", has(MMItems.COSMITE.get()))
+                .save(consumer, new ResourceLocation(MeaningfulMaterials.MODID, "cosmic_lantern"));
 
         oreProcessing(consumer, MMItems.COSMITE_ORE_ITEM.get(), MMItems.COSMITE.get(), "cosmite", 1.5f, 200);
     }

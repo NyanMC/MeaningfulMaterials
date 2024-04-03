@@ -18,7 +18,7 @@ public class MMBlockTags extends BlockTagsProvider {
 
     @Override
     protected void addTags() {
-        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(MMBlocks.COSMITE_BLOCK.get(), MMBlocks.COSMITE_ORE.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(MMBlocks.COSMITE_BLOCK.get(), MMBlocks.COSMITE_ORE.get(), MMBlocks.COSMIC_LANTERN.get());
         tag(BlockTags.NEEDS_DIAMOND_TOOL).add(MMBlocks.COSMITE_BLOCK.get(), MMBlocks.COSMITE_ORE.get());
 
         tag(BlockTags.BEACON_BASE_BLOCKS).add(MMBlocks.COSMITE_BLOCK.get());

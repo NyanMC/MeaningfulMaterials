@@ -27,4 +27,6 @@ public class MMItems {
             () -> new BlockItem(MMBlocks.COSMITE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
     public static final RegistryObject<BlockItem> COSMITE_ORE_ITEM = ITEMS_REGISTRY.register("cosmite_ore",
             () -> new BlockItem(MMBlocks.COSMITE_ORE.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+    public static final RegistryObject<BlockItem> COSMIC_LANTERN_ITEM = ITEMS_REGISTRY.register("cosmic_lantern",
+            () -> new BlockItem(MMBlocks.COSMIC_LANTERN.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
 }

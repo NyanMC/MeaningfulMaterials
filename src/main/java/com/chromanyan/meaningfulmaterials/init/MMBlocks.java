@@ -1,6 +1,7 @@
 package com.chromanyan.meaningfulmaterials.init;
 
 import com.chromanyan.meaningfulmaterials.MeaningfulMaterials;
+import com.chromanyan.meaningfulmaterials.content.block.CosmicLanternBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -25,4 +26,7 @@ public class MMBlocks {
                     .requiresCorrectToolForDrops()
                     .strength(4.5F, 6.0F))
     );
+
+    public static final RegistryObject<Block> COSMIC_LANTERN = BLOCKS_REGISTRY.register("cosmic_lantern",
+            CosmicLanternBlock::new);
 }
