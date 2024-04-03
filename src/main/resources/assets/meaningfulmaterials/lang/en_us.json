@@ -3,5 +3,6 @@
   "block.meaningfulmaterials.cosmite_block": "Cosmite Block",
   "block.meaningfulmaterials.cosmite_ore": "Cosmite Ore",
 
-  "item.meaningfulmaterials.cosmite_boots": "Cosmite Boots"
+  "item.meaningfulmaterials.cosmite_boots": "Cosmite Boots",
+  "tooltip.meaningfulmaterials.cosmite_boosted": "§5Boosted by Cosmite"
 }

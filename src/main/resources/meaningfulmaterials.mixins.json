@@ -5,7 +5,9 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "meaningfulmaterials.refmap.json",
   "mixins": [
-    "FallingBlockMixin"
+    "FallingBlockMixin",
+    "FireworkRocketItemMixin",
+    "FireworkRocketRecipeMixin"
   ],
   "client": [
   ],
