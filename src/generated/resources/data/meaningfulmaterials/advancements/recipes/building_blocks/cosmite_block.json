@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "meaningfulmaterials:cosmite_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_unpackable": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "meaningfulmaterials:cosmite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_unpackable",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "meaningfulmaterials:cosmite_block"
+    ]
+  }
+}
