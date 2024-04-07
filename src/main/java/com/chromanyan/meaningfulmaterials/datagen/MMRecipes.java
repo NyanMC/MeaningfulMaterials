@@ -39,7 +39,11 @@ public class MMRecipes extends RecipeProvider {
                 .unlockedBy("has_ore", has(ore))
                 .save(consumer, new ResourceLocation(MeaningfulMaterials.MODID, name + "_smelting"));
 
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ore), result, xp, time / 2)
+        oreBlasting(consumer, ore, result, name, xp, time / 2);
+    }
+
+    private void oreBlasting(@NotNull Consumer<FinishedRecipe> consumer, ItemLike ore, ItemLike result, String name, float xp, int time) {
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(ore), result, xp, time)
                 .unlockedBy("has_ore", has(ore))
                 .save(consumer, new ResourceLocation(MeaningfulMaterials.MODID, name + "_blasting"));
     }
@@ -76,5 +80,8 @@ public class MMRecipes extends RecipeProvider {
                 .save(consumer, new ResourceLocation(MeaningfulMaterials.MODID, "cosmic_lantern"));
 
         oreProcessing(consumer, MMItems.COSMITE_ORE_ITEM.get(), MMItems.COSMITE.get(), "cosmite", 1.5f, 200);
+
+        oreBlasting(consumer, MMItems.RAW_INFERNIUM.get(), MMItems.INFERNIUM_INGOT.get(), "infernium", 1.5f, 200);
+        oreBlasting(consumer, MMItems.INFERNIUM_ORE_ITEM.get(), MMItems.INFERNIUM_INGOT.get(), "infernium_from_ore", 1.5f, 200);
     }
 }

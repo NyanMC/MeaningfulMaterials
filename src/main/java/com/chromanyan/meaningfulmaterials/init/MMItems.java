@@ -18,6 +18,10 @@ public class MMItems {
 
     public static final RegistryObject<Item> COSMITE = ITEMS_REGISTRY.register("cosmite",
             () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MATERIALS)));
+    public static final RegistryObject<Item> INFERNIUM_INGOT = ITEMS_REGISTRY.register("infernium_ingot",
+            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MATERIALS).fireResistant()));
+    public static final RegistryObject<Item> RAW_INFERNIUM = ITEMS_REGISTRY.register("raw_infernium",
+            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MATERIALS).fireResistant()));
 
     public static final RegistryObject<Item> COSMIC_ARROW = ITEMS_REGISTRY.register("cosmic_arrow", CosmicArrowItem::new);
 
@@ -28,6 +32,14 @@ public class MMItems {
             () -> new BlockItem(MMBlocks.COSMITE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
     public static final RegistryObject<BlockItem> COSMITE_ORE_ITEM = ITEMS_REGISTRY.register("cosmite_ore",
             () -> new BlockItem(MMBlocks.COSMITE_ORE.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+
+    public static final RegistryObject<BlockItem> INFERNIUM_BLOCK_ITEM = ITEMS_REGISTRY.register("infernium_block",
+            () -> new BlockItem(MMBlocks.INFERNIUM_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS).fireResistant()));
+    public static final RegistryObject<BlockItem> INFERNIUM_ORE_ITEM = ITEMS_REGISTRY.register("infernium_ore",
+            () -> new BlockItem(MMBlocks.INFERNIUM_ORE.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS).fireResistant()));
+    public static final RegistryObject<BlockItem> RAW_INFERNIUM_BLOCK_ITEM = ITEMS_REGISTRY.register("raw_infernium_block",
+            () -> new BlockItem(MMBlocks.INFERNIUM_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS).fireResistant()));
+
     public static final RegistryObject<BlockItem> COSMIC_LANTERN_ITEM = ITEMS_REGISTRY.register("cosmic_lantern",
             () -> new SimpleTooltipBlockItem(MMBlocks.COSMIC_LANTERN.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS), "tooltip.meaningfulmaterials.cosmic_lantern"));
 }

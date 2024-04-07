@@ -14,6 +14,7 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DataProvider;
+import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.resources.RegistryOps;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -47,8 +48,11 @@ public class MMWorldGen {
         Map<ResourceLocation, ConfiguredFeature<?, ?>> configuredFeatures = Maps.newLinkedHashMap();
         Map<ResourceLocation, PlacedFeature> placedFeatures = Maps.newLinkedHashMap();
 
+        List<Holder<PlacedFeature>> netherFeatureList = Lists.newArrayList();
         List<Holder<PlacedFeature>> endFeatureList = Lists.newArrayList();
 
+        //noinspection OptionalGetWithoutIsPresent
+        HolderSet<Biome> netherBiomes = new HolderSet.Named<>(ops.registry(Registry.BIOME_REGISTRY).get(), BiomeTags.IS_NETHER);
         //noinspection OptionalGetWithoutIsPresent
         HolderSet<Biome> endBiomes = new HolderSet.Named<>(ops.registry(Registry.BIOME_REGISTRY).get(), BiomeTags.IS_END);
 
@@ -57,7 +61,13 @@ public class MMWorldGen {
                 OreConfiguration.target(BASE_STONE_END, MMBlocks.COSMITE_ORE.get().defaultBlockState())
         );
 
+        ResourceLocation inferniumName = new ResourceLocation(MeaningfulMaterials.MODID, "infernium_ore");
+        ImmutableList<OreConfiguration.TargetBlockState> inferniumTargetBlocks = ImmutableList.of(
+                OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, MMBlocks.COSMITE_ORE.get().defaultBlockState())
+        );
+
         ConfiguredFeature<?, ?> cosmiteOreFeature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(cosmiteTargetBlocks, 4));
+        ConfiguredFeature<?, ?> inferniumOreFeature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(inferniumTargetBlocks, 4));
 
         PlacedFeature cosmiteOrePlaced = new PlacedFeature(
                 holder(cosmiteOreFeature, ops, cosmiteName),
@@ -69,9 +79,31 @@ public class MMWorldGen {
                         BiomeFilter.biome()
                 )
         );
+
+        PlacedFeature inferniumOrePlaced = new PlacedFeature(
+                holder(inferniumOreFeature, ops, inferniumName),
+                List.of(
+                        CountPlacement.of(4),
+                        RarityFilter.onAverageOnceEvery(1),
+                        HeightRangePlacement.triangle(VerticalAnchor.absolute(70), VerticalAnchor.absolute(120)),
+                        InSquarePlacement.spread(),
+                        BiomeFilter.biome()
+                )
+        );
+
         configuredFeatures.put(cosmiteName, cosmiteOreFeature);
         placedFeatures.put(cosmiteName, cosmiteOrePlaced);
         endFeatureList.add(holderPlaced(cosmiteOrePlaced, ops, cosmiteName));
+
+        configuredFeatures.put(inferniumName, inferniumOreFeature);
+        placedFeatures.put(inferniumName, inferniumOrePlaced);
+        netherFeatureList.add(holderPlaced(inferniumOrePlaced, ops, inferniumName));
+
+        BiomeModifier netherOres = new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                netherBiomes,
+                HolderSet.direct(netherFeatureList),
+                GenerationStep.Decoration.UNDERGROUND_ORES
+        );
 
         BiomeModifier endOres = new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 endBiomes,
@@ -86,7 +118,8 @@ public class MMWorldGen {
         DataProvider biomeModifierProvider = JsonCodecProvider.forDatapackRegistry(generator, existingFileHelper,
                 MeaningfulMaterials.MODID, ops, ForgeRegistries.Keys.BIOME_MODIFIERS,
                 ImmutableMap.of(
-                    new ResourceLocation(MeaningfulMaterials.MODID, "end_ores"), endOres
+                        new ResourceLocation(MeaningfulMaterials.MODID, "nether_ores"), netherOres,
+                        new ResourceLocation(MeaningfulMaterials.MODID, "end_ores"), endOres
                 )
         );
 

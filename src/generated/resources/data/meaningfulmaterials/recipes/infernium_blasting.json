@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "cookingtime": 200,
+  "experience": 1.5,
+  "ingredient": {
+    "item": "meaningfulmaterials:raw_infernium"
+  },
+  "result": "meaningfulmaterials:infernium_ingot"
+}

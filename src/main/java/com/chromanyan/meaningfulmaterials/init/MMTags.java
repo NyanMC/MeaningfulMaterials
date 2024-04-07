@@ -21,6 +21,12 @@ public class MMTags {
         public static final TagKey<Item> STORAGE_BLOCKS_COSMITE = forgeTag("storage_blocks/cosmite");
         public static final TagKey<Item> ORES_COSMITE = forgeTag("ores/cosmite");
 
+        public static final TagKey<Item> INGOTS_INFERNIUM = forgeTag("ingots/infernium");
+        public static final TagKey<Item> STORAGE_BLOCKS_INFERNIUM = forgeTag("storage_blocks/infernium");
+        public static final TagKey<Item> RAW_MATERIALS_INFERNIUM = forgeTag("raw_materials/infernium");
+        public static final TagKey<Item> STORAGE_BLOCKS_RAW_INFERNIUM = forgeTag("storage_blocks/raw_infernium");
+        public static final TagKey<Item> ORES_INFERNIUM = forgeTag("ores/infernium");
+
         /**
          * ItemEntities containing an item with this tag will float in the air.
          */
@@ -34,6 +40,10 @@ public class MMTags {
 
         public static final TagKey<Block> STORAGE_BLOCKS_COSMITE = forgeTag("storage_blocks/cosmite");
         public static final TagKey<Block> ORES_COSMITE = forgeTag("ores/cosmite");
+
+        public static final TagKey<Block> STORAGE_BLOCKS_INFERNIUM = forgeTag("storage_blocks/infernium");
+        public static final TagKey<Block> STORAGE_BLOCKS_RAW_INFERNIUM = forgeTag("storage_blocks/raw_infernium");
+        public static final TagKey<Block> ORES_INFERNIUM = forgeTag("ores/infernium");
     }
 
 }

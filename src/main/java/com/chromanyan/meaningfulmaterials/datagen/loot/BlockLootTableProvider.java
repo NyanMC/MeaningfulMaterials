@@ -25,8 +25,13 @@ public class BlockLootTableProvider extends BlockLoot {
     @Override
     protected void addTables() {
         dropSelf(MMBlocks.COSMITE_BLOCK.get());
+
+        dropSelf(MMBlocks.INFERNIUM_BLOCK.get());
+        dropSelf(MMBlocks.RAW_INFERNIUM_BLOCK.get());
+
         dropSelf(MMBlocks.COSMIC_LANTERN.get());
 
         add(MMBlocks.COSMITE_ORE.get(), block -> createOreDrop(block, MMItems.COSMITE.get()));
+        add(MMBlocks.INFERNIUM_ORE.get(), block -> createOreDrop(block, MMItems.RAW_INFERNIUM.get()));
     }
 }

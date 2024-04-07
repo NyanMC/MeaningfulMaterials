@@ -2,6 +2,9 @@
   "values": [
     "meaningfulmaterials:cosmite_block",
     "meaningfulmaterials:cosmite_ore",
-    "meaningfulmaterials:cosmic_lantern"
+    "meaningfulmaterials:cosmic_lantern",
+    "meaningfulmaterials:infernium_block",
+    "meaningfulmaterials:infernium_ore",
+    "meaningfulmaterials:raw_infernium_block"
   ]
 }

@@ -1,5 +1,7 @@
 {
   "values": [
-    "meaningfulmaterials:cosmite_block"
+    "meaningfulmaterials:cosmite_block",
+    "meaningfulmaterials:infernium_block",
+    "meaningfulmaterials:raw_infernium_block"
   ]
 }
