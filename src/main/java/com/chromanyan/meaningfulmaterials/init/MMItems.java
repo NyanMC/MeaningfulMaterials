@@ -3,6 +3,7 @@ package com.chromanyan.meaningfulmaterials.init;
 import com.chromanyan.meaningfulmaterials.MeaningfulMaterials;
 import com.chromanyan.meaningfulmaterials.content.item.CosmicArrowItem;
 import com.chromanyan.meaningfulmaterials.content.item.CosmiteArmorItem;
+import com.chromanyan.meaningfulmaterials.content.item.SimpleTooltipBlockItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -28,5 +29,5 @@ public class MMItems {
     public static final RegistryObject<BlockItem> COSMITE_ORE_ITEM = ITEMS_REGISTRY.register("cosmite_ore",
             () -> new BlockItem(MMBlocks.COSMITE_ORE.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
     public static final RegistryObject<BlockItem> COSMIC_LANTERN_ITEM = ITEMS_REGISTRY.register("cosmic_lantern",
-            () -> new BlockItem(MMBlocks.COSMIC_LANTERN.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+            () -> new SimpleTooltipBlockItem(MMBlocks.COSMIC_LANTERN.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS), "tooltip.meaningfulmaterials.cosmic_lantern"));
 }

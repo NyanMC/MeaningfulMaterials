@@ -6,5 +6,7 @@
   "item.meaningfulmaterials.cosmic_arrow": "Cosmic Arrow",
   "item.meaningfulmaterials.cosmite_boots": "Cosmite Boots",
   "block.meaningfulmaterials.cosmic_lantern": "Cosmic Lantern",
-  "tooltip.meaningfulmaterials.cosmite_boosted": "§5Boosted by Cosmite"
+  "tooltip.meaningfulmaterials.cosmite_boosted": "§5Boosted by Cosmite",
+  "tooltip.meaningfulmaterials.cosmic_arrow": "Defies gravity",
+  "tooltip.meaningfulmaterials.cosmic_lantern": "Doesn't need a support block"
 }
