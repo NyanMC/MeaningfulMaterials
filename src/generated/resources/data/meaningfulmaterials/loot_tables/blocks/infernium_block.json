@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "meaningfulmaterials:raw_infernium_block"
+          "name": "meaningfulmaterials:infernium_block"
         }
       ],
       "rolls": 1.0

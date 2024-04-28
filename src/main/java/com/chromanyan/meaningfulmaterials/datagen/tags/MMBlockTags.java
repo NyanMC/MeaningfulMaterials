@@ -28,7 +28,9 @@ public class MMBlockTags extends BlockTagsProvider {
         );
         tag(BlockTags.NEEDS_DIAMOND_TOOL).add(
                 MMBlocks.COSMITE_BLOCK.get(),
-                MMBlocks.COSMITE_ORE.get(),
+                MMBlocks.COSMITE_ORE.get()
+        );
+        tag(BlockTags.NEEDS_IRON_TOOL).add(
                 MMBlocks.INFERNIUM_BLOCK.get(),
                 MMBlocks.INFERNIUM_ORE.get(),
                 MMBlocks.RAW_INFERNIUM_BLOCK.get()
