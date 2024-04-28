@@ -6,7 +6,7 @@
     "targets": [
       {
         "state": {
-          "Name": "meaningfulmaterials:cosmite_ore"
+          "Name": "meaningfulmaterials:infernium_ore"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",

@@ -63,7 +63,7 @@ public class MMWorldGen {
 
         ResourceLocation inferniumName = new ResourceLocation(MeaningfulMaterials.MODID, "infernium_ore");
         ImmutableList<OreConfiguration.TargetBlockState> inferniumTargetBlocks = ImmutableList.of(
-                OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, MMBlocks.COSMITE_ORE.get().defaultBlockState())
+                OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, MMBlocks.INFERNIUM_ORE.get().defaultBlockState())
         );
 
         ConfiguredFeature<?, ?> cosmiteOreFeature = new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(cosmiteTargetBlocks, 4));
