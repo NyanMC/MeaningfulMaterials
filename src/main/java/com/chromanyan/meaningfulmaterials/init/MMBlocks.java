@@ -2,6 +2,7 @@ package com.chromanyan.meaningfulmaterials.init;
 
 import com.chromanyan.meaningfulmaterials.MeaningfulMaterials;
 import com.chromanyan.meaningfulmaterials.content.block.CosmicLanternBlock;
+import com.chromanyan.meaningfulmaterials.content.block.InferniumOreBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -33,11 +34,8 @@ public class MMBlocks {
                     .lightLevel(value -> 7)
                     .sound(SoundType.METAL))
     );
-    public static final RegistryObject<Block> INFERNIUM_ORE = BLOCKS_REGISTRY.register("infernium_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_ORANGE)
-                    .requiresCorrectToolForDrops()
-                    .strength(4.5F, 6.0F))
-    );
+    public static final RegistryObject<Block> INFERNIUM_ORE = BLOCKS_REGISTRY.register("infernium_ore", InferniumOreBlock::new);
+
     public static final RegistryObject<Block> RAW_INFERNIUM_BLOCK = BLOCKS_REGISTRY.register("raw_infernium_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_ORANGE)
                     .requiresCorrectToolForDrops()
