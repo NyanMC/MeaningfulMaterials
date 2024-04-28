@@ -26,6 +26,7 @@ public class MMTags {
         public static final TagKey<Item> RAW_MATERIALS_INFERNIUM = forgeTag("raw_materials/infernium");
         public static final TagKey<Item> STORAGE_BLOCKS_RAW_INFERNIUM = forgeTag("storage_blocks/raw_infernium");
         public static final TagKey<Item> ORES_INFERNIUM = forgeTag("ores/infernium");
+        public static final TagKey<Item> DUSTS_INFERNIUM = forgeTag("dusts/infernium");
 
         /**
          * ItemEntities containing an item with this tag will float in the air.

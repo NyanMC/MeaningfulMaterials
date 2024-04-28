@@ -8,5 +8,12 @@
   "block.meaningfulmaterials.cosmic_lantern": "Cosmic Lantern",
   "tooltip.meaningfulmaterials.cosmite_boosted": "§5Boosted by Cosmite",
   "tooltip.meaningfulmaterials.cosmic_arrow": "Defies gravity",
-  "tooltip.meaningfulmaterials.cosmic_lantern": "Doesn't need a support block"
+  "tooltip.meaningfulmaterials.cosmic_lantern": "Doesn't need a support block",
+
+  "item.meaningfulmaterials.infernium_ingot": "Infernium Ingot",
+  "item.meaningfulmaterials.raw_infernium": "Raw Infernium",
+  "item.meaningfulmaterials.infernium_dust": "Infernium Dust",
+  "block.meaningfulmaterials.infernium_block": "Infernium Block",
+  "block.meaningfulmaterials.infernium_ore": "Infernium Ore",
+  "block.meaningfulmaterials.raw_infernium_block": "Raw Infernium Block"
 }

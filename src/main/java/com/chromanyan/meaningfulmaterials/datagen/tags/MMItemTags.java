@@ -34,6 +34,9 @@ public class MMItemTags extends ItemTagsProvider {
         tag(MMTags.Items.INGOTS_INFERNIUM).add(MMItems.INFERNIUM_INGOT.get());
         tag(Tags.Items.INGOTS).add(MMItems.INFERNIUM_INGOT.get());
 
+        tag(MMTags.Items.DUSTS_INFERNIUM).add(MMItems.INFERNIUM_DUST.get());
+        tag(Tags.Items.DUSTS).add(MMItems.INFERNIUM_DUST.get());
+
         tag(MMTags.Items.RAW_MATERIALS_INFERNIUM).add(MMItems.RAW_INFERNIUM.get());
         tag(Tags.Items.RAW_MATERIALS).add(MMItems.RAW_INFERNIUM.get());
 

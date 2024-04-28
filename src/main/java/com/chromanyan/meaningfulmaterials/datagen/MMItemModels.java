@@ -31,5 +31,13 @@ public class MMItemModels extends ItemModelProvider {
 
         blockModel("cosmite_block");
         blockModel("cosmite_ore");
+
+        basicModel("infernium_ingot");
+        basicModel("raw_infernium");
+        basicModel("infernium_dust");
+
+        blockModel("infernium_block");
+        blockModel("infernium_ore");
+        blockModel("raw_infernium_block");
     }
 }

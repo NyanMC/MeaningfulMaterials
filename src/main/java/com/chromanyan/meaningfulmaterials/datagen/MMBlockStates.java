@@ -15,5 +15,8 @@ public class MMBlockStates extends BlockStateProvider {
     protected void registerStatesAndModels() {
         simpleBlock(MMBlocks.COSMITE_BLOCK.get());
         simpleBlock(MMBlocks.COSMITE_ORE.get());
+        simpleBlock(MMBlocks.INFERNIUM_BLOCK.get());
+        simpleBlock(MMBlocks.INFERNIUM_ORE.get());
+        simpleBlock(MMBlocks.RAW_INFERNIUM_BLOCK.get());
     }
 }

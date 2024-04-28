@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "meaningfulmaterials:raw_infernium_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "meaningfulmaterials:raw_infernium"
+  }
+}

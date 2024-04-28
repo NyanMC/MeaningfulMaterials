@@ -51,6 +51,8 @@ public class MMRecipes extends RecipeProvider {
     @Override
     protected void buildCraftingRecipes(@NotNull Consumer<FinishedRecipe> consumer) {
         packAndUnpack(consumer, MMItems.COSMITE.get(), MMItems.COSMITE_BLOCK_ITEM.get(), "cosmite", "cosmite_block");
+        packAndUnpack(consumer, MMItems.INFERNIUM_INGOT.get(), MMItems.INFERNIUM_BLOCK_ITEM.get(), "infernium", "infernium_block");
+        packAndUnpack(consumer, MMItems.RAW_INFERNIUM.get(), MMItems.RAW_INFERNIUM_BLOCK_ITEM.get(), "raw_infernium", "raw_infernium_block");
 
         ShapedRecipeBuilder.shaped(MMItems.COSMITE_BOOTS.get())
                 .pattern("# #")
