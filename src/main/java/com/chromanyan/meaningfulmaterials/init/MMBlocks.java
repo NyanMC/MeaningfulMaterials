@@ -21,7 +21,7 @@ public class MMBlocks {
                     .sound(SoundType.METAL))
     );
     public static final RegistryObject<Block> COSMITE_ORE = BLOCKS_REGISTRY.register("cosmite_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.SAND)
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_PURPLE)
                     .requiresCorrectToolForDrops()
                     .strength(4.5F, 6.0F))
     );
@@ -34,12 +34,12 @@ public class MMBlocks {
                     .sound(SoundType.METAL))
     );
     public static final RegistryObject<Block> INFERNIUM_ORE = BLOCKS_REGISTRY.register("infernium_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.SAND)
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_ORANGE)
                     .requiresCorrectToolForDrops()
                     .strength(4.5F, 6.0F))
     );
     public static final RegistryObject<Block> RAW_INFERNIUM_BLOCK = BLOCKS_REGISTRY.register("raw_infernium_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.SAND)
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_ORANGE)
                     .requiresCorrectToolForDrops()
                     .strength(5.0F, 6.0F)
                     .lightLevel(value -> 5))
