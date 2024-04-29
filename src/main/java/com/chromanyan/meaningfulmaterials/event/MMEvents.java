@@ -3,9 +3,9 @@ package com.chromanyan.meaningfulmaterials.event;
 import com.chromanyan.meaningfulmaterials.init.MMTags;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.entity.EntityJoinLevelEvent;
 import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
@@ -40,9 +40,13 @@ public class MMEvents {
         if (!itemStack.isEdible() || !itemStack.hasTag()) return;
         if (!itemStack.getOrCreateTag().getBoolean("infernium_boosted")) return;
 
-        event.getEntity().hurt(DamageSource.ON_FIRE, 1);
-        event.getEntity().setSecondsOnFire(4);
+        LivingEntity livingEntity = event.getEntity();
 
-        event.getEntity().addEffect(new MobEffectInstance(MobEffects.SATURATION, 3));
+        livingEntity.hurt(DamageSource.ON_FIRE, 1);
+        livingEntity.setSecondsOnFire(4);
+
+        if (livingEntity instanceof Player player) { // in the offchance that a fox gets fed an infernium-boosted steak
+            player.getFoodData().eat(4, 0.25f);
+        }
     }
 }
