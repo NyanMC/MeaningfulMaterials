@@ -8,10 +8,7 @@ import com.chromanyan.meaningfulmaterials.datagen.loot.MMLootTableProvider;
 import com.chromanyan.meaningfulmaterials.datagen.tags.MMBlockTags;
 import com.chromanyan.meaningfulmaterials.datagen.tags.MMItemTags;
 import com.chromanyan.meaningfulmaterials.event.MMEvents;
-import com.chromanyan.meaningfulmaterials.init.MMBlocks;
-import com.chromanyan.meaningfulmaterials.init.MMDispenserBehaviors;
-import com.chromanyan.meaningfulmaterials.init.MMEntities;
-import com.chromanyan.meaningfulmaterials.init.MMItems;
+import com.chromanyan.meaningfulmaterials.init.*;
 import com.mojang.logging.LogUtils;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.MinecraftForge;
@@ -39,6 +36,7 @@ public class MeaningfulMaterials {
         MMEntities.ENTITY_TYPES_REGISTRY.register(modEventBus);
         MMBlocks.BLOCKS_REGISTRY.register(modEventBus);
         MMItems.ITEMS_REGISTRY.register(modEventBus);
+        MMRecipeSerializers.RECIPE_SERIALIZERS_REGISTRY.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);

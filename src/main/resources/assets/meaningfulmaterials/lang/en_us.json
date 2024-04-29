@@ -15,5 +15,6 @@
   "item.meaningfulmaterials.infernium_dust": "Infernium Dust",
   "block.meaningfulmaterials.infernium_block": "Infernium Block",
   "block.meaningfulmaterials.infernium_ore": "Infernium Ore",
-  "block.meaningfulmaterials.raw_infernium_block": "Raw Infernium Block"
+  "block.meaningfulmaterials.raw_infernium_block": "Raw Infernium Block",
+  "tooltip.meaningfulmaterials.infernium_enhanced": "§6Enhanced by Infernium"
 }
