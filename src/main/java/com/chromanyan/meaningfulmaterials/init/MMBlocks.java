@@ -2,6 +2,7 @@ package com.chromanyan.meaningfulmaterials.init;
 
 import com.chromanyan.meaningfulmaterials.MeaningfulMaterials;
 import com.chromanyan.meaningfulmaterials.content.block.CosmicLanternBlock;
+import com.chromanyan.meaningfulmaterials.content.block.InfernalFireBlock;
 import com.chromanyan.meaningfulmaterials.content.block.InferniumBlock;
 import com.chromanyan.meaningfulmaterials.content.block.InferniumOreBlock;
 import net.minecraft.world.level.block.Block;
@@ -46,4 +47,7 @@ public class MMBlocks {
 
     public static final RegistryObject<Block> COSMIC_LANTERN = BLOCKS_REGISTRY.register("cosmic_lantern",
             CosmicLanternBlock::new);
+
+    @SuppressWarnings("unused") // we don't need nor want to make a BlockItem for infernal fire
+    public static final RegistryObject<Block> INFERNAL_FIRE = BLOCKS_REGISTRY.register("infernal_fire", InfernalFireBlock::new);
 }
