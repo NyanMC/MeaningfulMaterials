@@ -6,7 +6,10 @@
     "targets": [
       {
         "state": {
-          "Name": "meaningfulmaterials:infernium_ore"
+          "Name": "meaningfulmaterials:infernium_ore",
+          "Properties": {
+            "places_lava": "true"
+          }
         },
         "target": {
           "predicate_type": "minecraft:tag_match",

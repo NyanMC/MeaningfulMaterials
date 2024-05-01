@@ -2,6 +2,7 @@ package com.chromanyan.meaningfulmaterials.datagen;
 
 import com.chromanyan.meaningfulmaterials.MeaningfulMaterials;
 import com.chromanyan.meaningfulmaterials.init.MMItems;
+import com.chromanyan.meaningfulmaterials.init.MMTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
@@ -80,6 +81,11 @@ public class MMRecipes extends RecipeProvider {
                 .requires(Items.LANTERN)
                 .unlockedBy("has_cosmite", has(MMItems.COSMITE.get()))
                 .save(consumer, new ResourceLocation(MeaningfulMaterials.MODID, "cosmic_lantern"));
+
+        ShapelessRecipeBuilder.shapeless(MMItems.INFERNIUM_DUST.get())
+                .requires(MMTags.Items.INGOTS_INFERNIUM)
+                .unlockedBy("has_infernium", has(MMTags.Items.INGOTS_INFERNIUM))
+                .save(consumer, new ResourceLocation(MeaningfulMaterials.MODID, "infernium_dust"));
 
         oreProcessing(consumer, MMItems.COSMITE_ORE_ITEM.get(), MMItems.COSMITE.get(), "cosmite", 1.5f, 200);
 
