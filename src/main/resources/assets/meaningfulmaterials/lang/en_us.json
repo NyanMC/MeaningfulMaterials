@@ -13,10 +13,12 @@
   "item.meaningfulmaterials.infernium_ingot": "Infernium Ingot",
   "item.meaningfulmaterials.raw_infernium": "Raw Infernium",
   "item.meaningfulmaterials.infernium_dust": "Infernium Dust",
+  "item.meaningfulmaterials.infernium_lighter": "Infernium Lighter",
   "block.meaningfulmaterials.infernium_block": "Infernium Block",
   "block.meaningfulmaterials.infernium_ore": "Infernium Ore",
   "block.meaningfulmaterials.raw_infernium_block": "Raw Infernium Block",
   "tooltip.meaningfulmaterials.infernium_enhanced": "§6Enhanced by Infernium",
+  "tooltip.meaningfulmaterials.infernium_lighter": "Lit fires burn forever and never spread",
 
   "block.meaningfulmaterials.infernal_fire": "Infernal Fire"
 }

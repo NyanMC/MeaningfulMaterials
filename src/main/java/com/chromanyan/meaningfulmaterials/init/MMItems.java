@@ -3,6 +3,7 @@ package com.chromanyan.meaningfulmaterials.init;
 import com.chromanyan.meaningfulmaterials.MeaningfulMaterials;
 import com.chromanyan.meaningfulmaterials.content.item.CosmicArrowItem;
 import com.chromanyan.meaningfulmaterials.content.item.CosmiteArmorItem;
+import com.chromanyan.meaningfulmaterials.content.item.InferniumLighterItem;
 import com.chromanyan.meaningfulmaterials.content.item.SimpleTooltipBlockItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.BlockItem;
@@ -18,6 +19,7 @@ public class MMItems {
 
     public static final RegistryObject<Item> COSMITE = ITEMS_REGISTRY.register("cosmite",
             () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MATERIALS)));
+
     public static final RegistryObject<Item> INFERNIUM_INGOT = ITEMS_REGISTRY.register("infernium_ingot",
             () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MATERIALS).fireResistant()));
     public static final RegistryObject<Item> RAW_INFERNIUM = ITEMS_REGISTRY.register("raw_infernium",
@@ -29,6 +31,8 @@ public class MMItems {
 
     public static final RegistryObject<Item> COSMITE_BOOTS = ITEMS_REGISTRY.register("cosmite_boots",
             () -> new CosmiteArmorItem(EquipmentSlot.FEET, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> INFERNIUM_LIGHTER = ITEMS_REGISTRY.register("infernium_lighter", InferniumLighterItem::new);
 
     public static final RegistryObject<BlockItem> COSMITE_BLOCK_ITEM = ITEMS_REGISTRY.register("cosmite_block",
             () -> new BlockItem(MMBlocks.COSMITE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));

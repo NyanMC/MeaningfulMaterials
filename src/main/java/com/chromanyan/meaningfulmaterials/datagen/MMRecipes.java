@@ -87,6 +87,12 @@ public class MMRecipes extends RecipeProvider {
                 .unlockedBy("has_infernium", has(MMTags.Items.INGOTS_INFERNIUM))
                 .save(consumer, new ResourceLocation(MeaningfulMaterials.MODID, "infernium_dust"));
 
+        ShapelessRecipeBuilder.shapeless(MMItems.INFERNIUM_LIGHTER.get())
+                .requires(MMTags.Items.INGOTS_INFERNIUM)
+                .requires(Items.FLINT)
+                .unlockedBy("has_infernium", has(MMTags.Items.INGOTS_INFERNIUM))
+                .save(consumer, new ResourceLocation(MeaningfulMaterials.MODID, "infernium_lighter"));
+
         oreProcessing(consumer, MMItems.COSMITE_ORE_ITEM.get(), MMItems.COSMITE.get(), "cosmite", 1.5f, 200);
 
         oreBlasting(consumer, MMItems.RAW_INFERNIUM.get(), MMItems.INFERNIUM_INGOT.get(), "infernium", 1.5f, 200);

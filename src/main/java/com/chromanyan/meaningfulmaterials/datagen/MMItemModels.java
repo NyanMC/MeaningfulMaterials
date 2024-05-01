@@ -35,6 +35,7 @@ public class MMItemModels extends ItemModelProvider {
         basicModel("infernium_ingot");
         basicModel("raw_infernium");
         basicModel("infernium_dust");
+        basicModel("infernium_lighter");
 
         blockModel("infernium_block");
         blockModel("infernium_ore");

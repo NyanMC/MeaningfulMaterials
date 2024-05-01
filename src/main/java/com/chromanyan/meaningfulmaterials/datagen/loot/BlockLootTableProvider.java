@@ -33,5 +33,7 @@ public class BlockLootTableProvider extends BlockLoot {
 
         add(MMBlocks.COSMITE_ORE.get(), block -> createOreDrop(block, MMItems.COSMITE.get()));
         add(MMBlocks.INFERNIUM_ORE.get(), block -> createOreDrop(block, MMItems.RAW_INFERNIUM.get()));
+
+        add(MMBlocks.INFERNAL_FIRE.get(), noDrop());
     }
 }
