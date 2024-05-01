@@ -27,7 +27,7 @@ public class InfernalFireBlock extends BaseFireBlock {
     public void entityInside(@NotNull BlockState pState, @NotNull Level pLevel, @NotNull BlockPos pPos, @NotNull Entity pEntity) {
         super.entityInside(pState, pLevel, pPos, pEntity);
 
-        if (!pEntity.fireImmune() && pEntity.getRemainingFireTicks() == 0) {
+        if (!pEntity.fireImmune()) {
             pEntity.setSecondsOnFire(120);
         }
     }
