@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "tag": "forge:ingots/infernium"
+    },
+    "s": {
+      "tag": "forge:rods/wooden"
+    }
+  },
+  "pattern": [
+    "###",
+    " s ",
+    " s "
+  ],
+  "result": {
+    "item": "meaningfulmaterials:infernium_pickaxe"
+  }
+}

@@ -9,6 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.minecraftforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Consumer;
@@ -92,6 +93,51 @@ public class MMRecipes extends RecipeProvider {
                 .requires(Items.FLINT)
                 .unlockedBy("has_infernium", has(MMTags.Items.INGOTS_INFERNIUM))
                 .save(consumer, new ResourceLocation(MeaningfulMaterials.MODID, "infernium_lighter"));
+
+        ShapedRecipeBuilder.shaped(MMItems.INFERNIUM_SWORD.get())
+                .pattern("#")
+                .pattern("#")
+                .pattern("s")
+                .define('#', MMTags.Items.INGOTS_INFERNIUM)
+                .define('s', Tags.Items.RODS_WOODEN)
+                .unlockedBy("has_infernium", has(MMTags.Items.INGOTS_INFERNIUM))
+                .save(consumer, new ResourceLocation(MeaningfulMaterials.MODID, "infernium_sword"));
+
+        ShapedRecipeBuilder.shaped(MMItems.INFERNIUM_SHOVEL.get())
+                .pattern("#")
+                .pattern("s")
+                .pattern("s")
+                .define('#', MMTags.Items.INGOTS_INFERNIUM)
+                .define('s', Tags.Items.RODS_WOODEN)
+                .unlockedBy("has_infernium", has(MMTags.Items.INGOTS_INFERNIUM))
+                .save(consumer, new ResourceLocation(MeaningfulMaterials.MODID, "infernium_shovel"));
+
+        ShapedRecipeBuilder.shaped(MMItems.INFERNIUM_PICKAXE.get())
+                .pattern("###")
+                .pattern(" s ")
+                .pattern(" s ")
+                .define('#', MMTags.Items.INGOTS_INFERNIUM)
+                .define('s', Tags.Items.RODS_WOODEN)
+                .unlockedBy("has_infernium", has(MMTags.Items.INGOTS_INFERNIUM))
+                .save(consumer, new ResourceLocation(MeaningfulMaterials.MODID, "infernium_pickaxe"));
+
+        ShapedRecipeBuilder.shaped(MMItems.INFERNIUM_AXE.get())
+                .pattern("##")
+                .pattern("#s")
+                .pattern(" s")
+                .define('#', MMTags.Items.INGOTS_INFERNIUM)
+                .define('s', Tags.Items.RODS_WOODEN)
+                .unlockedBy("has_infernium", has(MMTags.Items.INGOTS_INFERNIUM))
+                .save(consumer, new ResourceLocation(MeaningfulMaterials.MODID, "infernium_axe"));
+
+        ShapedRecipeBuilder.shaped(MMItems.INFERNIUM_HOE.get())
+                .pattern("##")
+                .pattern(" s")
+                .pattern(" s")
+                .define('#', MMTags.Items.INGOTS_INFERNIUM)
+                .define('s', Tags.Items.RODS_WOODEN)
+                .unlockedBy("has_infernium", has(MMTags.Items.INGOTS_INFERNIUM))
+                .save(consumer, new ResourceLocation(MeaningfulMaterials.MODID, "infernium_hoe"));
 
         oreProcessing(consumer, MMItems.COSMITE_ORE_ITEM.get(), MMItems.COSMITE.get(), "cosmite", 1.5f, 200);
 

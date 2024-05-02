@@ -6,9 +6,7 @@ import com.chromanyan.meaningfulmaterials.content.item.CosmiteArmorItem;
 import com.chromanyan.meaningfulmaterials.content.item.InferniumLighterItem;
 import com.chromanyan.meaningfulmaterials.content.item.SimpleTooltipBlockItem;
 import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -33,6 +31,26 @@ public class MMItems {
             () -> new CosmiteArmorItem(EquipmentSlot.FEET, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
 
     public static final RegistryObject<Item> INFERNIUM_LIGHTER = ITEMS_REGISTRY.register("infernium_lighter", InferniumLighterItem::new);
+
+    public static final RegistryObject<Item> INFERNIUM_SWORD = ITEMS_REGISTRY.register("infernium_sword",
+            () -> new SwordItem(MMToolMaterials.INFERNIUM, 3, -2.4f,
+                    new Item.Properties().tab(CreativeModeTab.TAB_COMBAT).fireResistant()));
+
+    public static final RegistryObject<Item> INFERNIUM_SHOVEL = ITEMS_REGISTRY.register("infernium_shovel",
+            () -> new ShovelItem(MMToolMaterials.INFERNIUM, 1.5f, -3.0f,
+                    new Item.Properties().tab(CreativeModeTab.TAB_TOOLS).fireResistant()));
+
+    public static final RegistryObject<Item> INFERNIUM_PICKAXE = ITEMS_REGISTRY.register("infernium_pickaxe",
+            () -> new PickaxeItem(MMToolMaterials.INFERNIUM, 1, -2.8f,
+                    new Item.Properties().tab(CreativeModeTab.TAB_TOOLS).fireResistant()));
+
+    public static final RegistryObject<Item> INFERNIUM_AXE = ITEMS_REGISTRY.register("infernium_axe",
+            () -> new AxeItem(MMToolMaterials.INFERNIUM, 6.0f, -3.0f,
+                    new Item.Properties().tab(CreativeModeTab.TAB_TOOLS).fireResistant()));
+
+    public static final RegistryObject<Item> INFERNIUM_HOE = ITEMS_REGISTRY.register("infernium_hoe",
+            () -> new HoeItem(MMToolMaterials.INFERNIUM, -2, 0.0f,
+                    new Item.Properties().tab(CreativeModeTab.TAB_TOOLS).fireResistant()));
 
     public static final RegistryObject<BlockItem> COSMITE_BLOCK_ITEM = ITEMS_REGISTRY.register("cosmite_block",
             () -> new BlockItem(MMBlocks.COSMITE_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));

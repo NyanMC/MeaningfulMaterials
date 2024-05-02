@@ -7,7 +7,8 @@
   "mixins": [
     "FallingBlockMixin",
     "FireworkRocketItemMixin",
-    "FireworkRocketRecipeMixin"
+    "FireworkRocketRecipeMixin",
+    "MixinItemStack"
   ],
   "client": [
   ],
