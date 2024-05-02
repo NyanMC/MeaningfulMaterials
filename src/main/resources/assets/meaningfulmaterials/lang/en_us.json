@@ -20,5 +20,9 @@
   "tooltip.meaningfulmaterials.infernium_enhanced": "§6Enhanced by Infernium",
   "tooltip.meaningfulmaterials.infernium_lighter": "Lit fires burn forever and never spread",
 
-  "block.meaningfulmaterials.infernal_fire": "Infernal Fire"
+  "block.meaningfulmaterials.infernal_fire": "Infernal Fire",
+
+  "jei.meaningfulmaterials.firework_boosting": "Include Cosmite in the recipe for Fireworks to increase their flight duration by 1.",
+  "jei.meaningfulmaterials.falling_blocks_no_fall": "Blocks that would normally obey the laws of gravity (sand, gravel, anvils, etc.) will not fall when placed next to this block.",
+  "jei.meaningfulmaterials.food_enhancing": "Craft any food with Infernium Dust to enhance it, increasing the amount of hunger restored but setting the consumer on fire."
 }
