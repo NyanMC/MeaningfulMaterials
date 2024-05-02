@@ -31,7 +31,7 @@ import java.util.List;
 public class InferniumLighterItem extends Item {
 
     public InferniumLighterItem() {
-        super(new Item.Properties().durability(64).tab(CreativeModeTab.TAB_TOOLS));
+        super(new Item.Properties().durability(64).tab(CreativeModeTab.TAB_TOOLS).fireResistant());
     }
 
     public @NotNull InteractionResult useOn(UseOnContext pContext) {
