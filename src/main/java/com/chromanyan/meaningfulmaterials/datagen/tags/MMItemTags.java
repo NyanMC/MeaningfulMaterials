@@ -53,6 +53,12 @@ public class MMItemTags extends ItemTagsProvider {
 
         tag(ItemTags.ARROWS).add(MMItems.COSMIC_ARROW.get());
 
+        tag(Tags.Items.TOOLS_SWORDS).add(MMItems.INFERNIUM_SWORD.get());
+        tag(Tags.Items.TOOLS_SHOVELS).add(MMItems.INFERNIUM_SHOVEL.get());
+        tag(Tags.Items.TOOLS_PICKAXES).add(MMItems.INFERNIUM_PICKAXE.get());
+        tag(Tags.Items.TOOLS_AXES).add(MMItems.INFERNIUM_AXE.get());
+        tag(Tags.Items.TOOLS_HOES).add(MMItems.INFERNIUM_HOE.get());
+
         tag(Tags.Items.ARMORS_BOOTS).add(MMItems.COSMITE_BOOTS.get());
     }
 }
