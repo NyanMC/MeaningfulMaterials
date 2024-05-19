@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "#": {
       "item": "meaningfulmaterials:raw_infernium"
@@ -12,5 +13,6 @@
   ],
   "result": {
     "item": "meaningfulmaterials:raw_infernium_block"
-  }
+  },
+  "show_notification": true
 }

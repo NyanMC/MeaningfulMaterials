@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "#": {
       "item": "meaningfulmaterials:cosmite"
@@ -12,5 +13,6 @@
   ],
   "result": {
     "item": "meaningfulmaterials:cosmite_block"
-  }
+  },
+  "show_notification": true
 }

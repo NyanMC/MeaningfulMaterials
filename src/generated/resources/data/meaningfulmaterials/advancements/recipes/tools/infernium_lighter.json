@@ -28,5 +28,6 @@
     "recipes": [
       "meaningfulmaterials:infernium_lighter"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -28,5 +28,6 @@
     "recipes": [
       "meaningfulmaterials:infernium_dust"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "equipment",
   "key": {
     "#": {
       "item": "meaningfulmaterials:cosmite"
@@ -11,5 +12,6 @@
   ],
   "result": {
     "item": "meaningfulmaterials:cosmite_boots"
-  }
+  },
+  "show_notification": true
 }

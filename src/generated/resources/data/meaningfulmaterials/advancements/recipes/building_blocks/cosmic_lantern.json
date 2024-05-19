@@ -1,34 +1,35 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "meaningfulmaterials:raw_infernium_block"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    },
-    "has_unpackable": {
+    "has_cosmite": {
       "conditions": {
         "items": [
           {
             "items": [
-              "meaningfulmaterials:raw_infernium"
+              "meaningfulmaterials:cosmite"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "meaningfulmaterials:cosmic_lantern"
+      },
+      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_unpackable",
+      "has_cosmite",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "meaningfulmaterials:raw_infernium_block"
+      "meaningfulmaterials:cosmic_lantern"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

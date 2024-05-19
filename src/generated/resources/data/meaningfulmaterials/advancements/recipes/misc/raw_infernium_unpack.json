@@ -30,5 +30,6 @@
     "recipes": [
       "meaningfulmaterials:raw_infernium_unpack"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }
