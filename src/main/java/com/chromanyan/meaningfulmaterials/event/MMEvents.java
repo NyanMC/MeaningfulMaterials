@@ -3,7 +3,6 @@ package com.chromanyan.meaningfulmaterials.event;
 import com.chromanyan.meaningfulmaterials.init.MMTags;
 import com.chromanyan.meaningfulmaterials.init.MMToolMaterials;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
@@ -46,7 +45,7 @@ public class MMEvents {
 
         LivingEntity livingEntity = event.getEntity();
 
-        livingEntity.hurt(DamageSource.ON_FIRE, 1);
+        livingEntity.hurt(livingEntity.damageSources().onFire(), 1);
         livingEntity.setSecondsOnFire(4);
 
         // in the offchance that a fox gets fed an infernium-boosted steak
