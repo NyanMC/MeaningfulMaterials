@@ -2,21 +2,19 @@ package com.chromanyan.meaningfulmaterials.content.recipe;
 
 import com.chromanyan.meaningfulmaterials.init.MMRecipeSerializers;
 import com.chromanyan.meaningfulmaterials.init.MMTags;
+import net.minecraft.core.RegistryAccess;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.CraftingContainer;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.CustomRecipe;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 
 public class EnhanceFoodRecipe extends CustomRecipe {
     private static final Ingredient INFERNIUM_INGREDIENT = Ingredient.of(MMTags.Items.DUSTS_INFERNIUM);
 
-    public EnhanceFoodRecipe(ResourceLocation pId) {
-        super(pId);
+    public EnhanceFoodRecipe(ResourceLocation pId, CraftingBookCategory pCategory) {
+        super(pId, pCategory);
     }
 
     @Override
@@ -46,7 +44,7 @@ public class EnhanceFoodRecipe extends CustomRecipe {
     }
 
     @Override
-    public @NotNull ItemStack assemble(@NotNull CraftingContainer pContainer) {
+    public @NotNull ItemStack assemble(@NotNull CraftingContainer pContainer, @NotNull RegistryAccess pRegistryAccess) {
         ItemStack foodStack = null;
         for(int j = 0; j < pContainer.getContainerSize(); ++j) {
             ItemStack itemstack = pContainer.getItem(j);
