@@ -1,14 +1,14 @@
 package com.chromanyan.meaningfulmaterials.datagen;
 
 import com.chromanyan.meaningfulmaterials.MeaningfulMaterials;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class MMItemModels extends ItemModelProvider {
 
-    public MMItemModels(DataGenerator generator, ExistingFileHelper existingFileHelper) {
-        super(generator, MeaningfulMaterials.MODID, existingFileHelper);
+    public MMItemModels(PackOutput packOutput, ExistingFileHelper existingFileHelper) {
+        super(packOutput, MeaningfulMaterials.MODID, existingFileHelper);
     }
 
     private void basicModel(String name) {

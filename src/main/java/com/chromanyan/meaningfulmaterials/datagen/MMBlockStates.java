@@ -2,13 +2,13 @@ package com.chromanyan.meaningfulmaterials.datagen;
 
 import com.chromanyan.meaningfulmaterials.MeaningfulMaterials;
 import com.chromanyan.meaningfulmaterials.init.MMBlocks;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class MMBlockStates extends BlockStateProvider {
-    public MMBlockStates(DataGenerator generator, ExistingFileHelper existingFileHelper) {
-        super(generator, MeaningfulMaterials.MODID, existingFileHelper);
+    public MMBlockStates(PackOutput packOutput, ExistingFileHelper existingFileHelper) {
+        super(packOutput, MeaningfulMaterials.MODID, existingFileHelper);
     }
 
     @Override

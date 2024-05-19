@@ -103,12 +103,12 @@ public class MeaningfulMaterials {
 
             gen.addProvider(true, new MMLootTableProvider(output));
 
-            gen.addProvider(true, new MMRecipes(gen));
+            gen.addProvider(true, new MMRecipes(output));
         }
 
         if (event.includeClient()) {
-            gen.addProvider(true, new MMBlockStates(gen, efh));
-            gen.addProvider(true, new MMItemModels(gen, efh));
+            gen.addProvider(true, new MMBlockStates(output, efh));
+            gen.addProvider(true, new MMItemModels(output, efh));
         }
     }
 }
