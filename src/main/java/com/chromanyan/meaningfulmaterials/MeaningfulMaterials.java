@@ -10,6 +10,7 @@ import com.chromanyan.meaningfulmaterials.event.MMEvents;
 import com.chromanyan.meaningfulmaterials.init.*;
 import com.mojang.logging.LogUtils;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -88,6 +89,7 @@ public class MeaningfulMaterials {
 
     public void gatherData(GatherDataEvent event) {
         DataGenerator gen = event.getGenerator();
+        PackOutput output = gen.getPackOutput();
         ExistingFileHelper efh = event.getExistingFileHelper();
 
         MMBlockTags blockTags = new MMBlockTags(gen, efh);
@@ -95,7 +97,7 @@ public class MeaningfulMaterials {
             gen.addProvider(true, blockTags);
             gen.addProvider(true, new MMItemTags(gen, blockTags, efh));
 
-            gen.addProvider(true, new MMLootTableProvider(gen));
+            gen.addProvider(true, new MMLootTableProvider(output));
 
             gen.addProvider(true, new MMRecipes(gen));
         }
