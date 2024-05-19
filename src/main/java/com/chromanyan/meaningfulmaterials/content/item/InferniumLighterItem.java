@@ -10,7 +10,6 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -31,7 +30,7 @@ import java.util.List;
 public class InferniumLighterItem extends Item {
 
     public InferniumLighterItem() {
-        super(new Item.Properties().durability(64).tab(CreativeModeTab.TAB_TOOLS).fireResistant());
+        super(new Item.Properties().durability(64).fireResistant());
     }
 
     public @NotNull InteractionResult useOn(UseOnContext pContext) {

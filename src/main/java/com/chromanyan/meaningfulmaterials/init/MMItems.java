@@ -5,7 +5,6 @@ import com.chromanyan.meaningfulmaterials.content.item.CosmicArrowItem;
 import com.chromanyan.meaningfulmaterials.content.item.CosmiteArmorItem;
 import com.chromanyan.meaningfulmaterials.content.item.InferniumLighterItem;
 import com.chromanyan.meaningfulmaterials.content.item.SimpleTooltipBlockItem;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -28,7 +27,7 @@ public class MMItems {
     public static final RegistryObject<Item> COSMIC_ARROW = ITEMS_REGISTRY.register("cosmic_arrow", CosmicArrowItem::new);
 
     public static final RegistryObject<Item> COSMITE_BOOTS = ITEMS_REGISTRY.register("cosmite_boots",
-            () -> new CosmiteArmorItem(EquipmentSlot.FEET, new Item.Properties()));
+            () -> new CosmiteArmorItem(ArmorItem.Type.BOOTS, new Item.Properties()));
 
     public static final RegistryObject<Item> INFERNIUM_LIGHTER = ITEMS_REGISTRY.register("infernium_lighter", InferniumLighterItem::new);
 

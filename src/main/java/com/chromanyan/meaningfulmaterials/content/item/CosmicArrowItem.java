@@ -17,7 +17,7 @@ import java.util.List;
 
 public class CosmicArrowItem extends ArrowItem {
     public CosmicArrowItem() {
-        super(new Properties().tab(CreativeModeTab.TAB_COMBAT));
+        super(new Properties());
     }
 
     public @NotNull AbstractArrow createArrow(@NotNull Level p_43237_, @NotNull ItemStack p_43238_, @NotNull LivingEntity p_43239_) {

@@ -68,6 +68,7 @@ public class MeaningfulMaterials {
         if (event.getTabKey().equals(CreativeModeTabs.COMBAT)) {
             event.accept(MMItems.COSMITE_BOOTS.get());
             event.accept(MMItems.INFERNIUM_SWORD.get());
+            event.accept(MMItems.COSMIC_ARROW.get());
         }
 
         if (event.getTabKey().equals(CreativeModeTabs.TOOLS_AND_UTILITIES)) {
@@ -75,6 +76,7 @@ public class MeaningfulMaterials {
             event.accept(MMItems.INFERNIUM_PICKAXE.get());
             event.accept(MMItems.INFERNIUM_AXE.get());
             event.accept(MMItems.INFERNIUM_HOE.get());
+            event.accept(MMItems.INFERNIUM_LIGHTER.get());
         }
 
         if (event.getTabKey().equals(CreativeModeTabs.BUILDING_BLOCKS)) {
