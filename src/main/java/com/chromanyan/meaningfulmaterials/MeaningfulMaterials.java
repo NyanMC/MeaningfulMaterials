@@ -3,7 +3,6 @@ package com.chromanyan.meaningfulmaterials;
 import com.chromanyan.meaningfulmaterials.datagen.MMBlockStates;
 import com.chromanyan.meaningfulmaterials.datagen.MMItemModels;
 import com.chromanyan.meaningfulmaterials.datagen.MMRecipes;
-import com.chromanyan.meaningfulmaterials.datagen.MMWorldGen;
 import com.chromanyan.meaningfulmaterials.datagen.loot.MMLootTableProvider;
 import com.chromanyan.meaningfulmaterials.datagen.tags.MMBlockTags;
 import com.chromanyan.meaningfulmaterials.datagen.tags.MMItemTags;
@@ -99,8 +98,6 @@ public class MeaningfulMaterials {
             gen.addProvider(true, new MMLootTableProvider(gen));
 
             gen.addProvider(true, new MMRecipes(gen));
-
-            MMWorldGen.init(gen, efh);
         }
 
         if (event.includeClient()) {
