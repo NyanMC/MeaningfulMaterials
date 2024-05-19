@@ -1,6 +1,7 @@
 package com.chromanyan.meaningfulmaterials.mixin;
 
 import com.chromanyan.meaningfulmaterials.init.MMItems;
+import net.minecraft.core.RegistryAccess;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.inventory.CraftingContainer;
 import net.minecraft.world.item.ItemStack;
@@ -39,11 +40,11 @@ public class FireworkRocketRecipeMixin {
         return count == 1;
     }
 
-    @Inject(method = "assemble(Lnet/minecraft/world/inventory/CraftingContainer;)Lnet/minecraft/world/item/ItemStack;", at = @At("RETURN"), cancellable = true)
-    private void assemble(CraftingContainer p_43852_, CallbackInfoReturnable<ItemStack> cir) {
+    @Inject(method = "assemble(Lnet/minecraft/world/inventory/CraftingContainer;Lnet/minecraft/core/RegistryAccess;)Lnet/minecraft/world/item/ItemStack;", at = @At("RETURN"), cancellable = true)
+    private void assemble(CraftingContainer pContainer, RegistryAccess pRegistryAccess, CallbackInfoReturnable<ItemStack> cir) {
         boolean hasCosmite = false;
-        for (int j = 0; j < p_43852_.getContainerSize(); ++j) {
-            ItemStack itemstack1 = p_43852_.getItem(j);
+        for (int j = 0; j < pContainer.getContainerSize(); ++j) {
+            ItemStack itemstack1 = pContainer.getItem(j);
             if (itemstack1.isEmpty() || !COSMITE_INGREDIENT.test(itemstack1)) continue;
             hasCosmite = true;
             break;
