@@ -14,8 +14,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.material.MaterialColor;
+import net.minecraft.world.level.material.MapColor;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -24,7 +23,8 @@ public class InferniumOreBlock extends Block {
     public static final BooleanProperty PLACES_LAVA = BooleanProperty.create("places_lava");
 
     public InferniumOreBlock() {
-        super(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_ORANGE)
+        super(BlockBehaviour.Properties.of()
+                .mapColor(MapColor.COLOR_ORANGE)
                 .requiresCorrectToolForDrops()
                 .strength(4.5F, 6.0F));
         this.registerDefaultState(this.getStateDefinition().any().setValue(PLACES_LAVA, true));

@@ -9,15 +9,15 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MapColor;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 
 public class CosmicLanternBlock extends LanternBlock {
     public CosmicLanternBlock() {
-        super(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(3.5F)
-                .sound(SoundType.LANTERN).lightLevel((p_187433_) -> 15).noOcclusion());
+        super(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).forceSolidOn().requiresCorrectToolForDrops()
+                .strength(3.5F).sound(SoundType.LANTERN).lightLevel((p_187433_) -> 15).noOcclusion());
     }
 
     @Nullable
