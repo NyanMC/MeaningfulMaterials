@@ -3,21 +3,25 @@ package com.chromanyan.meaningfulmaterials.datagen.tags;
 import com.chromanyan.meaningfulmaterials.MeaningfulMaterials;
 import com.chromanyan.meaningfulmaterials.init.MMBlocks;
 import com.chromanyan.meaningfulmaterials.init.MMTags;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
 import net.minecraftforge.common.Tags;
+import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.concurrent.CompletableFuture;
 
 public class MMBlockTags extends BlockTagsProvider {
 
-    public MMBlockTags(DataGenerator p_126511_, @Nullable ExistingFileHelper existingFileHelper) {
-        super(p_126511_, MeaningfulMaterials.MODID, existingFileHelper);
+    public MMBlockTags(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
+        super(output, lookupProvider, MeaningfulMaterials.MODID, existingFileHelper);
     }
 
     @Override
-    protected void addTags() {
+    protected void addTags(HolderLookup.@NotNull Provider provider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
                 MMBlocks.COSMITE_BLOCK.get(),
                 MMBlocks.COSMITE_ORE.get(),

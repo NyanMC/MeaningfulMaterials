@@ -9,6 +9,7 @@ import com.chromanyan.meaningfulmaterials.datagen.tags.MMItemTags;
 import com.chromanyan.meaningfulmaterials.event.MMEvents;
 import com.chromanyan.meaningfulmaterials.init.*;
 import com.mojang.logging.LogUtils;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -21,6 +22,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+
+import java.util.concurrent.CompletableFuture;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(MeaningfulMaterials.MODID)
@@ -91,11 +94,12 @@ public class MeaningfulMaterials {
         DataGenerator gen = event.getGenerator();
         PackOutput output = gen.getPackOutput();
         ExistingFileHelper efh = event.getExistingFileHelper();
+        CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
-        MMBlockTags blockTags = new MMBlockTags(gen, efh);
         if (event.includeServer()) {
+            MMBlockTags blockTags = new MMBlockTags(output, lookupProvider, efh);
             gen.addProvider(true, blockTags);
-            gen.addProvider(true, new MMItemTags(gen, blockTags, efh));
+            gen.addProvider(true, new MMItemTags(output, lookupProvider, blockTags.contentsGetter(), efh));
 
             gen.addProvider(true, new MMLootTableProvider(output));
 

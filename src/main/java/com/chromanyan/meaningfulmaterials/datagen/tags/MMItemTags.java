@@ -3,22 +3,26 @@ package com.chromanyan.meaningfulmaterials.datagen.tags;
 import com.chromanyan.meaningfulmaterials.MeaningfulMaterials;
 import com.chromanyan.meaningfulmaterials.init.MMItems;
 import com.chromanyan.meaningfulmaterials.init.MMTags;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.concurrent.CompletableFuture;
 
 public class MMItemTags extends ItemTagsProvider {
 
-    public MMItemTags(DataGenerator p_126530_, BlockTagsProvider p_126531_, @Nullable ExistingFileHelper existingFileHelper) {
-        super(p_126530_, p_126531_, MeaningfulMaterials.MODID, existingFileHelper);
+    public MMItemTags(PackOutput pOutput, CompletableFuture<HolderLookup.Provider> pLookupProvider, CompletableFuture<TagLookup<Block>> pBlockTags, @Nullable ExistingFileHelper existingFileHelper) {
+        super(pOutput, pLookupProvider, pBlockTags, MeaningfulMaterials.MODID, existingFileHelper);
     }
 
     @Override
-    protected void addTags() {
+    protected void addTags(HolderLookup.@NotNull Provider provider) {
         copy(MMTags.Blocks.STORAGE_BLOCKS_COSMITE, MMTags.Items.STORAGE_BLOCKS_COSMITE);
         copy(MMTags.Blocks.STORAGE_BLOCKS_INFERNIUM, MMTags.Items.STORAGE_BLOCKS_INFERNIUM);
         copy(MMTags.Blocks.STORAGE_BLOCKS_RAW_INFERNIUM, MMTags.Items.STORAGE_BLOCKS_RAW_INFERNIUM);
@@ -53,11 +57,11 @@ public class MMItemTags extends ItemTagsProvider {
 
         tag(ItemTags.ARROWS).add(MMItems.COSMIC_ARROW.get());
 
-        tag(Tags.Items.TOOLS_SWORDS).add(MMItems.INFERNIUM_SWORD.get());
-        tag(Tags.Items.TOOLS_SHOVELS).add(MMItems.INFERNIUM_SHOVEL.get());
-        tag(Tags.Items.TOOLS_PICKAXES).add(MMItems.INFERNIUM_PICKAXE.get());
-        tag(Tags.Items.TOOLS_AXES).add(MMItems.INFERNIUM_AXE.get());
-        tag(Tags.Items.TOOLS_HOES).add(MMItems.INFERNIUM_HOE.get());
+        tag(ItemTags.SWORDS).add(MMItems.INFERNIUM_SWORD.get());
+        tag(ItemTags.SHOVELS).add(MMItems.INFERNIUM_SHOVEL.get());
+        tag(ItemTags.PICKAXES).add(MMItems.INFERNIUM_PICKAXE.get());
+        tag(ItemTags.AXES).add(MMItems.INFERNIUM_AXE.get());
+        tag(ItemTags.HOES).add(MMItems.INFERNIUM_HOE.get());
 
         tag(Tags.Items.ARMORS_BOOTS).add(MMItems.COSMITE_BOOTS.get());
     }
