@@ -6,6 +6,7 @@ import com.chromanyan.meaningfulmaterials.datagen.MMRecipes;
 import com.chromanyan.meaningfulmaterials.datagen.loot.MMLootTableProvider;
 import com.chromanyan.meaningfulmaterials.datagen.tags.MMBlockTags;
 import com.chromanyan.meaningfulmaterials.datagen.tags.MMItemTags;
+import com.chromanyan.meaningfulmaterials.event.AppleSkinEventHandler;
 import com.chromanyan.meaningfulmaterials.event.MMEvents;
 import com.chromanyan.meaningfulmaterials.init.*;
 import com.mojang.logging.LogUtils;
@@ -18,7 +19,9 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
@@ -45,6 +48,7 @@ public class MeaningfulMaterials {
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(this::clientSetup);
         modEventBus.addListener(this::gatherData);
         modEventBus.addListener(this::addCreative);
 
@@ -55,6 +59,12 @@ public class MeaningfulMaterials {
     private void commonSetup(final FMLCommonSetupEvent event) {
         MinecraftForge.EVENT_BUS.register(new MMEvents());
         MMDispenserBehaviors.registerBehaviors();
+    }
+
+    private void clientSetup(final FMLClientSetupEvent event) {
+        if (ModList.get().isLoaded("appleskin")) {
+            MinecraftForge.EVENT_BUS.register(new AppleSkinEventHandler());
+        }
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
