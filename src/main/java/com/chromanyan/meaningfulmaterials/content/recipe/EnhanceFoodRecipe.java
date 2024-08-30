@@ -2,6 +2,7 @@ package com.chromanyan.meaningfulmaterials.content.recipe;
 
 import com.chromanyan.meaningfulmaterials.init.MMRecipeSerializers;
 import com.chromanyan.meaningfulmaterials.init.MMTags;
+import net.minecraft.core.NonNullList;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.CraftingContainer;
@@ -15,6 +16,11 @@ public class EnhanceFoodRecipe extends CustomRecipe {
 
     public EnhanceFoodRecipe(ResourceLocation pId, CraftingBookCategory pCategory) {
         super(pId, pCategory);
+    }
+
+    @Override
+    public @NotNull NonNullList<ItemStack> getRemainingItems(CraftingContainer pContainer) {
+        return NonNullList.withSize(pContainer.getContainerSize(), ItemStack.EMPTY);
     }
 
     @Override
