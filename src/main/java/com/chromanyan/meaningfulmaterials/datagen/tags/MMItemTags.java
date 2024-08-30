@@ -64,5 +64,6 @@ public class MMItemTags extends ItemTagsProvider {
         tag(ItemTags.HOES).add(MMItems.INFERNIUM_HOE.get());
 
         tag(Tags.Items.ARMORS_BOOTS).add(MMItems.COSMITE_BOOTS.get());
+        tag(ItemTags.TRIMMABLE_ARMOR).add(MMItems.COSMITE_BOOTS.get());
     }
 }
