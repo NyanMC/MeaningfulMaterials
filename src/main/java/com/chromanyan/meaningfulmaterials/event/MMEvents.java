@@ -2,6 +2,7 @@ package com.chromanyan.meaningfulmaterials.event;
 
 import com.chromanyan.meaningfulmaterials.init.MMTags;
 import com.chromanyan.meaningfulmaterials.init.MMToolMaterials;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -30,10 +31,17 @@ public class MMEvents {
     @SubscribeEvent
     public void onItemTooltip(ItemTooltipEvent event) {
         ItemStack itemStack = event.getItemStack();
-        if (itemStack.isEdible() && itemStack.hasTag()) {
-            if (itemStack.getOrCreateTag().getBoolean("infernium_boosted")) {
-                event.getToolTip().add(1, Component.translatable("tooltip.meaningfulmaterials.infernium_enhanced"));
-            }
+
+        if (!itemStack.hasTag()) return;
+
+        if (itemStack.isEdible() && itemStack.getOrCreateTag().getBoolean("infernium_boosted")) {
+            event.getToolTip().add(1, Component.translatable("tooltip.meaningfulmaterials.infernium_enhanced"));
+        }
+
+        CompoundTag fireworksData = itemStack.getTagElement("Fireworks");
+
+        if (fireworksData != null && fireworksData.getBoolean("Cosmite")) {
+            event.getToolTip().add(1, Component.translatable("tooltip.meaningfulmaterials.cosmite_boosted"));
         }
     }
 

@@ -6,7 +6,6 @@
   "refmap": "meaningfulmaterials.refmap.json",
   "mixins": [
     "FallingBlockMixin",
-    "FireworkRocketItemMixin",
     "FireworkRocketRecipeMixin",
     "MixinItemStack"
   ],
