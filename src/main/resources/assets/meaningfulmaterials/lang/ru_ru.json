@@ -1,0 +1,33 @@
+{
+  "item.meaningfulmaterials.cosmite": "Космит",
+  "block.meaningfulmaterials.cosmite_block": "Космитовый блок",
+  "block.meaningfulmaterials.cosmite_ore": "Космитовая руда",
+
+  "item.meaningfulmaterials.cosmic_arrow": "Космитовая стрела",
+  "item.meaningfulmaterials.cosmite_boots": "Космитовые ботинки",
+  "block.meaningfulmaterials.cosmic_lantern": "Космический фонарь",
+  "tooltip.meaningfulmaterials.cosmite_boosted": "§5Усилен космитом",
+  "tooltip.meaningfulmaterials.cosmic_arrow": "Игнорирует гравитацию",
+  "tooltip.meaningfulmaterials.cosmic_lantern": "Не нуждается в опорном блоке",
+
+  "item.meaningfulmaterials.infernium_ingot": "Инферниевый слиток",
+  "item.meaningfulmaterials.raw_infernium": "Рудный инферний",
+  "item.meaningfulmaterials.infernium_dust": "Инферниевая пыль",
+  "item.meaningfulmaterials.infernium_lighter": "Инферниевое огниво",
+  "item.meaningfulmaterials.infernium_sword": "Инферниевый меч",
+  "item.meaningfulmaterials.infernium_shovel": "Инферниевая лопата",
+  "item.meaningfulmaterials.infernium_pickaxe": "Инферниевая кирка",
+  "item.meaningfulmaterials.infernium_axe": "Инферниевый топор",
+  "item.meaningfulmaterials.infernium_hoe": "Инферниевая мотыга",
+  "block.meaningfulmaterials.infernium_block": "Инферниевый блок",
+  "block.meaningfulmaterials.infernium_ore": "Инферниевая руда",
+  "block.meaningfulmaterials.raw_infernium_block": "Рудный инферниевый блок",
+  "tooltip.meaningfulmaterials.infernium_enhanced": "§6Улучшен инфернием",
+  "tooltip.meaningfulmaterials.infernium_lighter": "Зажжённый огонь горит вечно и никогда не распространяется",
+
+  "block.meaningfulmaterials.infernal_fire": "Адский огонь",
+
+  "jei.meaningfulmaterials.firework_boosting": "Включите космит в рецепт фейерверков, чтобы увеличить продолжительность их полёта на 1.",
+  "jei.meaningfulmaterials.falling_blocks_no_fall": "Блоки, которые обычно подчиняются законам гравитации (песок, гравий, наковальни и т. д.), не упадут, если их поместить рядом с этим блоком.",
+  "jei.meaningfulmaterials.food_enhancing": "Создайте любую еду с помощью инферниевой пыли, чтобы улучшить её, увеличивая количество восстанавливаемого голода, но поджигая потребителя."
+}
